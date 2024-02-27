@@ -1,3 +1,19 @@
+* {
+    list-style: none;
+}
+
+body {
+    display: flex;
+    background-color: #f6f8fc;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+body.active {
+    overflow: hidden;
+}
+
 .pokemons {
     display: grid;
     grid-template-columns: 1fr;
@@ -84,6 +100,7 @@
     margin: .5rem;
     padding: 1rem;
     border-radius: 1rem;
+    cursor: pointer;
 }
 
 .pokemon .number {
@@ -146,9 +163,19 @@
     border-radius: 1rem;
 }
 
+form {
+    display: flex;
+    justify-content: center;
+    min-width: 80vw;
+}
+
 @media screen and (min-width: 380px) {
     .pokemons {
         grid-template-columns: 1fr 1fr;
+    }
+
+    .container_details_pokemon {
+        max-width: 768px;
     }
 }
 
